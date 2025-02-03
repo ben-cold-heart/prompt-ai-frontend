@@ -18,7 +18,7 @@ function App() {
 
     try {
       // Send the prompt to the backend
-      const res = await fetch("http://localhost:5000/chat", {
+      const res = await fetch("http://127.0.0.1:5000/chat", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt }),
@@ -80,13 +80,18 @@ function App() {
     >
       <h1
         style={{
+          backgroundColor: "#e4afed",
+          width: "100%",
+          padding: "10px 0",
           color: "#ffffff",
           textAlign: "center",
           fontSize: "2.5rem",
           margin: "10px",
+          position: "sticky",
+          top: 0
         }}
       >
-        AI Chatbot
+        Horoscope AI
       </h1>
 
       {/* Chatbox */}
